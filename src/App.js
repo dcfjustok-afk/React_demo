@@ -1,6 +1,7 @@
-import MountDemo from "./commonents/lifeCyber/MountDemo";
-import UpdateDemo from "./commonents/lifeCyber/UpdateDemo";
-import LifeCycleHooks from "./commonents/lifeCyber/LifeCycleHooks";
+import Parent from "./commonents/ComponentCommunication/Parent";
+import Grandparent from "./commonents/ComponentCommunication/Grandparent";
+
+
 
 import "./App.css";
 import { useState } from "react";
@@ -8,10 +9,9 @@ function App() {
   let [exist, setExist] = useState(true);
   return (
     <div>
-      <div>
-       {exist && <LifeCycleHooks></LifeCycleHooks>}
-      </div>
-      <button onClick={() => setExist(!exist)}>卸载组件</button>
+      <Parent></Parent>
+      <div style={{ margin: "20px" }}></div>
+      <Grandparent></Grandparent>
     </div>
   );
 }
