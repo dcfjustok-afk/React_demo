@@ -1,15 +1,17 @@
-import Test1 from "./commonents/state/test1";
-import Test2 from "./commonents/state/test2";
-import './App.css';
+import MountDemo from "./commonents/lifeCyber/MountDemo";
+import UpdateDemo from "./commonents/lifeCyber/UpdateDemo";
+import LifeCycleHooks from "./commonents/lifeCyber/LifeCycleHooks";
+
+import "./App.css";
+import { useState } from "react";
 function App() {
+  let [exist, setExist] = useState(true);
   return (
     <div>
-      <div className="test1">
-        <Test1></Test1>
+      <div>
+       {exist && <LifeCycleHooks></LifeCycleHooks>}
       </div>
-      <div className="test2">
-        <Test2></Test2>
-      </div>
+      <button onClick={() => setExist(!exist)}>卸载组件</button>
     </div>
   );
 }
