@@ -36,4 +36,7 @@ createAsyncThunk()
 为什么需要
     常见场景 发请求获取数据，需要处理loading / success / error 三种状态。
     createAsyncThunk 可以自动处理这些状态，避免手动编写重复代码。 它可以让这些状态管理清晰、少错
-    
+
+个人总结：
+    RTK 提供了很多方便的工具函数，简化 Redux 代码。
+    1、configureStare（） 代替了createStore() ，它会自动配置
