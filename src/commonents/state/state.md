@@ -23,7 +23,7 @@ State 更新机制
         调用setState方法后，state并不会立即更新，而是会在稍后的时间点更新。
             setCount(count + 1);
             console.log(count); // 不会立刻变，会在稍后的时间点更新
-
+=
     2、State的更新是批量的
         调用setState方法后，state并不会立即更新，而是会在稍后的时间点更新。
         例如：
